@@ -12,7 +12,7 @@
         padding-bottom: 5px;
     }
 </style>
-<body onload=" setupDoubleClick( 'https://dictionary.cambridge.org/', 'british', false, null, 5, 'popup' ) ">
+<body>
     <div class="row well well-sm" style="position: fixed; bottom: 0px; right:0px; left:0px; z-index: 9999; margin-bottom: 0px;">
         <audio id="audiofile" src="christmasgift-Nishu.mp3" class="col-md-12" controls>
         </audio><br>
@@ -33,12 +33,16 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Dictionary API Integration -->
     <script type="text/javascript" src="dictionary.js"></script>
     <div id="pl-dbox"><a class="pl-dbox-title" href="javascript:void(0);dboxCursorLoc();"><span id="pl-dbox-title-text">Dictionary</span></a>
     <div style="display: none" id="pl-dbox-content"><div id="pl-dboxFlags"><ul><li><img src="http://dictionarybox.com/flags/English.png" alt="english" /></li>
     <li></li><li><h3>English Dictionary</h3></li></ul></div><div id="pl-dbox-ajax-content">
     <p class="info">Double click on any word on the page or type a word:</p><p><input type="text" name="pl-dbox-search-field" style="width:97%;" id="pl-dbox-search-field" onKeyPress="return dbxChkKy(event);" autocomplete=off /></p>
     <p id="pl-dbox-search-button"><input type="button" value=" Search! " OnClick="getdboxResults();"/></p></div><input id="pl-dbox-glossary" type="hidden" value="EnglishToEnglish"/>
+    <!-- end -->
+        
     <script>
     ( function(win, doc) {
         var audioPlayer = doc.getElementById("audiofile");
